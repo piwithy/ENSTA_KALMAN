@@ -1,0 +1,31 @@
+% This function should be called when a key is pressed.
+function keycontrol()
+% Global variables to share with other files.
+global u;
+global bExit;
+global scale;
+pi=3.14154;
+speed_inc=1;
+key = get(gcbf,'CurrentCharacter');
+% Actions to do depending on the key pressed.
+switch (key)
+    case 27,
+        bExit = 1;
+    case 'z',
+        u = u+ [speed_inc, 0];
+    case 's',
+        u = u+[-speed_inc, 0];
+    case 'q',
+        u = u+[0, pi/8]
+    case 'd',
+        u = u+[0, -pi/8]
+    case '+',
+        scale = scale*0.9;
+    case '-',
+        scale = scale/0.9;
+end
+if(u(2)>3*pi/8)
+    u(2)=3*pi/8
+else if(u(2)<-3*pi/8
+end
+end

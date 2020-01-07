@@ -1,0 +1,14 @@
+clear
+close all
+
+global alpha;global beta;global L;global
+alpha=1;beta=1;L=4;
+x=[0;0;0]; u=[20;3.14/4];
+dt=0.01;t=0;
+figure
+while ()
+    x=x+dt*f(x,u);
+    clf;hold on; axis([-20,20,-20,20]);axis square; draw(x,u)
+    pause(dt)
+    t=t+dt
+end
